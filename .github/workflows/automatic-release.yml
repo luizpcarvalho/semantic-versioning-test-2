@@ -1,26 +1,26 @@
 ---
-name: "release"
+name: release
 
 on:
   push:
     branches:
-      - "main"
+      - main
 
 jobs:
-  pre-release:
-    name: "Release"
-    runs-on: "ubuntu-latest"
+  release:
+    name: Release
+    runs-on: ubuntu-latest
 
     steps:
       - name: calculate next version
-          id: version
-          uses: patrickjahns/version-drafter-action@v1
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        id: version
+        uses: patrickjahns/version-drafter-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Release
-        uses: "marvinpinto/action-automatic-releases@latest"
+        uses: marvinpinto/action-automatic-releases@latest
         with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "v${{ steps.version.outputs.version }}"
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: v${{ steps.version.outputs.version }}
           prerelease: false
-          title: "v${{ steps.version.outputs.version }}"
+          title: v${{ steps.version.outputs.version }}
