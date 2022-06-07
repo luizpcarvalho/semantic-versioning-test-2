@@ -21,6 +21,6 @@ jobs:
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: v${{ steps.version.outputs.version }}
+          automatic_release_tag: v${{ steps.version.outputs.next-version }}
           prerelease: false
-          title: v${{ steps.version.outputs.version }}
+          title: v${{ steps.version.outputs.next-version }}
