@@ -11,7 +11,7 @@ import java.time.ZoneId
 @Controller("/api/v1/hello")
 class HelloController {
 
-    @Get("/world")
+    @Get
     fun helloWorld(@Header("name") name: String, @Header("lastName") lastName: String): MutableHttpResponse<String> {
         val dayOfWeek = LocalDate.now(ZoneId.of("America/Sao_Paulo")).dayOfWeek.name.lowercase()
         val day = LocalDate.now(ZoneId.of("America/Sao_Paulo")).dayOfMonth
