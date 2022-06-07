@@ -12,15 +12,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: calculate next version
+      - uses: actions/checkout@v2
+      - name: Bump version and push tag
         id: version
-        uses: patrickjahns/version-drafter-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: mathieudutour/github-tag-action@v6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Release
         uses: marvinpinto/action-automatic-releases@latest
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          automatic_release_tag: v${{ steps.version.outputs.next-version }}
+          automatic_release_tag: v${{ steps.version.outputs.new_tag }}
           prerelease: false
-          title: v${{ steps.version.outputs.next-version }}
+          title: v${{ steps.version.outputs.new_tag }}
