@@ -1,6 +1,6 @@
-## POC to implement an automated tag/release cycle, based on pull request labels
+## POC: tag/release cycle and changelog generation
 
-POC to implement an automated tag/release cycle, based on PR labels.
+POC to test an automated tag/release cycle based on conventional commits, and generate a changelog.
 
 Uses:
 
