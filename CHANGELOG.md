@@ -1,3 +1,12 @@
+## [3.2.2](https://github.com/luizpcarvalho/semantic-versioning-test-2/compare/v3.2.1...v3.2.2) (2022-07-14)
+
+
+### Performance Improvements
+
+* test if perf bumps version ([9bc732d](https://github.com/luizpcarvalho/semantic-versioning-test-2/commit/9bc732d329a5487720add83d2b3e8875c6ad1af5))
+
+
+
 ## [3.2.1](https://github.com/luizpcarvalho/semantic-versioning-test-2/compare/v3.2.0...v3.2.1) (2022-06-08)
 
 
