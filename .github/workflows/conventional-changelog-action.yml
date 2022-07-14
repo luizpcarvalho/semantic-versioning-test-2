@@ -20,7 +20,7 @@ jobs:
           github-token: ${{ secrets.github_token }}
           release-count: "0"
           skip-version-file: "true"
-          skip-commit: "false"
+          skip-commit: "false" # false para dar push das alterações no CHANGELOG.md (branch não pode ser protegida)
 
       - name: Create Release
         uses: actions/create-release@v1
