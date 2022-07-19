@@ -15,5 +15,5 @@ jobs:
       - name: Get latest tag
         run: |
           git init
-          git remote add https://github.com/luizpcarvalho/semantic-versioning-test-2.git
+          git remote add origin https://github.com/luizpcarvalho/semantic-versioning-test-2.git
           git ls-remote --tags --sort='v:refname' origin | tail -n1 | sed 's/.*\///; s/\^{}//'
