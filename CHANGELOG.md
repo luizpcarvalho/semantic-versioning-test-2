@@ -1,3 +1,12 @@
+# [3.3.0](https://github.com/luizpcarvalho/semantic-versioning-test-2/compare/v3.2.2...v3.3.0) (2022-07-19)
+
+
+### Features
+
+* show latest tag in workflow ([7988001](https://github.com/luizpcarvalho/semantic-versioning-test-2/commit/798800199cd2346a206b80676791d84820c97e1e))
+
+
+
 ## [3.2.2](https://github.com/luizpcarvalho/semantic-versioning-test-2/compare/v3.2.1...v3.2.2) (2022-07-14)
 
 
