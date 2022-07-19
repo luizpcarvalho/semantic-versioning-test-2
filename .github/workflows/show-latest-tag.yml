@@ -1,0 +1,19 @@
+---
+name: show-latest-tag
+
+on:
+  push:
+    branches:
+      -dev
+
+jobs:
+  old-version:
+    name: Show old version
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get latest tag
+        run: |
+          git init
+          git remote add https://github.com/luizpcarvalho/semantic-versioning-test-2.git
+          git ls-remote --tags --sort='v:refname' origin | tail -n1 | sed 's/.*\///; s/\^{}//'
