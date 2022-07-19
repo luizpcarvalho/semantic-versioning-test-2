@@ -31,3 +31,12 @@ jobs:
           tag_name: ${{ steps.changelog.outputs.tag }}
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
+
+  old-version:
+    name: Show old version
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get latest tag
+        run: |
+          git ls-remote --tags --sort='v:refname' origin | tail -n1 | sed 's/.*\///; s/\^{}//'
