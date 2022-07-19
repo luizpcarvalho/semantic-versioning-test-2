@@ -4,7 +4,7 @@ name: show-latest-tag
 on:
   push:
     branches:
-      -dev
+      - dev
 
 jobs:
   old-version:
