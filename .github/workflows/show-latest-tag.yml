@@ -19,4 +19,4 @@ jobs:
           git remote add origin https://github.com/luizpcarvalho/semantic-versioning-test-2.git
           echo "::set-output name=latest-tag::$(git ls-remote --tags --sort='v:refname' origin | tail -n1 | sed 's/.*\///; s/\^{}//')"
       - name: Print latest tag
-        run: echo "${{ steps.latest-tag.outputs.latest-tag }}"
+        run: echo "${{ steps.latest-tag.outputs.latest-tag }}" | tr -d v
